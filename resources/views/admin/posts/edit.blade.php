@@ -13,6 +13,7 @@
         <textarea name="article" id="descrizione" cols="30" rows="10" class="form-control">{{ old('article', $post->article)}}</textarea>
         <label for="cat" class="form-label">articolo</label>
         <select name="category_id" id="cat" class="form-control">
+            <option value="">Seleziona una categoria</option>
             @foreach ($categories as $category)
             <option value="{{$category->id}}
                 "@if ($category->id == old('category_id', $post->category_id)) selected  
