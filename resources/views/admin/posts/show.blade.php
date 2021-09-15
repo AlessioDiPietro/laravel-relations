@@ -10,6 +10,10 @@
         <hr>
         <p> {{$post->article}} </p>
         <hr>
+        <h2>Categorie:</h2>
+        @if ($post->category)
+        <p><strong>{{$post->category->name}}</strong></p>
+        @endif
         <a href="{{route('admin.posts.index')}}" class="btn btn-primary">indietro</a>
 
 
